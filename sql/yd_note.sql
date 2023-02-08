@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 08/02/2023 14:21:35
+ Date: 08/02/2023 14:49:15
 */
 
 SET NAMES utf8mb4;
@@ -26,7 +26,7 @@ CREATE TABLE `t_conver_request`  (
   `request_id` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '请求id',
   `add_time` datetime(0) DEFAULT NULL,
   `convert_url` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '转换的思维导图网址',
-  `status` tinyint(1) DEFAULT 0 COMMENT '状态：0-未处理，1-处理成功，2-处理失败',
+  `status` tinyint(4) DEFAULT 0 COMMENT '状态：0-未处理，1-处理成功，2-处理失败',
   `fail_txt` varchar(512) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '处理失败原因',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '思维导图转换请求表' ROW_FORMAT = Dynamic;
